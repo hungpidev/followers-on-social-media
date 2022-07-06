@@ -1,0 +1,27 @@
+.heading {
+  font-size: 54rem;
+  font-weight: 800;
+  line-height: calc(64 / 54);
+}
+.text {
+  font-weight: 500;
+  font-size: 18rem;
+  line-height: calc(30 / 18);
+  color: var(--text-color);
+}
+.text-small {
+  font-weight: 400;
+  font-size: 12rem;
+  line-height: calc(26 / 12);
+  color: #fff;
+}
+@media screen and (max-width: 1279.98px) {
+  .heading {
+    font-size: 40rem;
+  }
+}
+@media screen and (max-width: 1023.98px) {
+  .heading {
+    font-size: 30rem;
+  }
+}

@@ -1,0 +1,42 @@
+.character {
+  opacity: 0;
+  transition: 0.25s linear;
+}
+
+.fade,
+.reveal-subscribe-box {
+  opacity: 1;
+}
+
+.reveal-service-list,
+.reveal-testimonial-list {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+.reveal-partner-desc,
+.reveal-partner-list,
+.reveal-proof,
+.reveal-service-heading,
+.reveal-testimonial-box,
+.reveal-top-content,
+.reveal-top-image,
+.reveal-bottom-content,
+.reveal-bottom-image,
+.reveal-faq-left,
+.reveal-faq-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-hero-image {
+  transform: translate(80rem, -55rem);
+  opacity: 1;
+}
+
+@media screen and (max-width: 1279.98px) {
+  .reveal-hero-image {
+    transform: none;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,125 @@
+.subscribe {
+  padding-top: 130rem;
+  padding-bottom: 136rem;
+  background-image: url(../images/bgc-subscribe.png);
+  background-repeat: no-repeat;
+  background-color: rgba(80, 70, 186, 0.4);
+  background-blend-mode: overlay;
+  background-size: cover;
+
+  &__box {
+    position: relative;
+    padding: 66rem 46rem;
+    max-width: 593rem;
+    background-color: $primary-color;
+    overflow: hidden;
+    border-radius: 15rem;
+    opacity: 0;
+    transition: 1.6s ease-in-out;
+  }
+
+  &__decor {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 14rem;
+    line-height: calc(17 / 14);
+    text-transform: uppercase;
+    color: #dee1e6;
+    margin-bottom: 13rem;
+  }
+
+  &__heading {
+    font-weight: 800;
+    font-size: 30rem;
+    line-height: calc(40 / 30);
+    color: #ffffff;
+    margin-bottom: 22rem;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__input {
+    min-width: 358rem;
+    width: 100%;
+    height: 58rem;
+    border: none;
+    border: 2px solid transparent;
+    outline: none;
+    padding: 20rem;
+    font-size: 18rem;
+    font-weight: 600;
+    line-height: 0;
+    font-family: $font;
+    background-color: #aca8d6;
+    color: #1b1c31;
+    border-radius: 10rem 0 0 10rem;
+
+    &::-webkit-input-placeholder {
+      font-size: 14rem;
+      font-family: $font;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #1b1c31;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    height: 58rem;
+    border: none;
+    outline: none;
+    background-color: #ff7f5c;
+    border-radius: 0 10rem 10rem 0;
+    font-size: 14rem;
+    font-weight: 600;
+    font-family: $font;
+    text-transform: uppercase;
+    color: #e8f2ff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+
+    &:hover {
+      background-color: #ec6641;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+@media screen and (max-width: 1279.98px) {
+  .subscribe {
+    &__box {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .subscribe {
+    padding: 20rem 0;
+
+    &__form {
+      @include flexBox(stretch, stretch, column);
+      gap: 20rem;
+      width: 100%;
+    }
+
+    &__box {
+      padding: 30rem 20rem;
+    }
+
+    &__input {
+      min-width: 100%;
+      border-radius: 10rem;
+    }
+
+    &__button {
+      border-radius: 10rem;
+    }
+  }
+}

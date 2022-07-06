@@ -1,0 +1,124 @@
+.feature {
+  padding-bottom: 60rem;
+  overflow-x: hidden;
+
+  &--top {
+    @include flexBox(center, space-between);
+    gap: 120rem;
+    margin-bottom: 128rem;
+
+    &__content {
+      flex: 1 1 0;
+      position: relative;
+      transform: translateX(calc(-100% - 100px));
+      opacity: 0;
+      transition: 1s ease-in-out;
+    }
+
+    &__heading {
+      margin-bottom: 24rem;
+      color: var(--text-color);
+    }
+
+    &__desc {
+      margin-bottom: 44rem;
+    }
+
+    &__image {
+      width: 100%;
+      max-width: 525rem;
+      position: relative;
+      transform: translateX(calc(100% + 100px));
+      opacity: 0;
+      transition: 1s ease-in-out;
+    }
+
+    &__box {
+      position: relative;
+    }
+
+    &__button {
+      &:hover {
+        animation: button 1s;
+        box-shadow: 0 0 0 2em transparent;
+      }
+    }
+
+    @keyframes button {
+      0% {
+        box-shadow: 0 0 0 0 $primary-color;
+      }
+    }
+  }
+
+  &--bottom {
+    @include flexBox(center, space-between);
+    gap: 86rem;
+
+    &__content {
+      flex: 1 1 0;
+      position: relative;
+      transform: translate(-50%, -100px);
+      opacity: 0;
+      transition: 1s ease-in-out;
+    }
+
+    &__image {
+      width: 100%;
+      max-width: 570rem;
+      position: relative;
+      transform: translate(50%, -100px);
+      opacity: 0;
+      transition: 1s ease-in-out;
+    }
+
+    &__heading {
+      margin-bottom: 24rem;
+      color: var(--text-color);
+    }
+
+    &__desc {
+      margin-bottom: 44rem;
+    }
+
+    &__box {
+      position: relative;
+    }
+
+    &__button {
+      &:hover {
+        animation: button 1s;
+        box-shadow: 0 0 0 2em transparent;
+      }
+    }
+
+    @keyframes button {
+      0% {
+        box-shadow: 0 0 0 0 $primary-color;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023.98px) {
+  .feature {
+    &--top {
+      flex-direction: column-reverse;
+      gap: 50rem;
+      margin-bottom: 50rem;
+
+      &__content {
+        max-width: 678rem;
+      }
+    }
+
+    &--bottom {
+      gap: 30rem;
+      flex-direction: column;
+
+      &__content {
+        max-width: 678rem;
+      }
+    }
+  }
+}

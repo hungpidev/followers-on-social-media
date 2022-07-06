@@ -1,0 +1,87 @@
+.loaded .loading {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #202023;
+  z-index: 99999;
+  transition: opacity 0.5s linear;
+
+  &__inner {
+    @include size(75px, 15px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+
+    div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include size(15px);
+      border-radius: 50%;
+      animation-timing-function: cubic-bezier(0, 1, 1, 0);
+    }
+
+    div:nth-child(1) {
+      background-color: #10cdf9;
+      left: 0;
+      animation: loader1 0.6s infinite;
+    }
+
+    div:nth-child(2) {
+      background-color: #21e499;
+      left: 0;
+      animation: loader2 0.6s infinite;
+    }
+
+    div:nth-child(3) {
+      background-color: #6252c5;
+      left: 30px;
+      animation: loader2 0.6s infinite;
+    }
+
+    div:nth-child(4) {
+      background-color: #6252c5;
+      left: 60px;
+      animation: loader3 0.6s infinite;
+    }
+  }
+}
+
+@keyframes loader1 {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes loader2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(30px, 0);
+  }
+}
+
+@keyframes loader3 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}

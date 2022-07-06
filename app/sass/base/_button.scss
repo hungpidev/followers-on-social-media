@@ -1,0 +1,21 @@
+.btn {
+  display: inline-block;
+  border: 2px solid var(--btn-color);
+  border-radius: 10rem;
+  color: var(--btn-color);
+  font-size: 16rem;
+  text-align: center;
+  font-weight: 700;
+  padding: 14rem 37rem;
+}
+.btn-primary {
+  color: #fff;
+  border: 2px solid transparent;
+  background-color: var(--btn-color);
+  transition: 0.3s linear;
+  &:hover {
+    background-color: transparent;
+    border: 2px solid var(--btn-color);
+    color: var(--btn-color);
+  }
+}

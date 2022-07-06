@@ -1,0 +1,100 @@
+.service {
+  --padding-top: 159rem;
+  --padding-bottom: 79rem;
+  --font-size-heading: 40rem;
+  --max-width-heading: 632rem;
+  padding-top: var(--padding-top);
+  padding-bottom: var(--padding-bottom);
+  position: relative;
+  overflow-x: hidden;
+
+  &__heading {
+    max-width: var(--max-width-heading);
+    font-weight: 800;
+    font-size: var(--font-size-heading);
+    line-height: calc(50 / 40);
+    color: var(--text-color);
+    margin-bottom: 50rem;
+    position: relative;
+    transform: translate(-100%, -159px);
+    opacity: 0;
+    transition: 1s ease-in-out;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 64rem;
+    list-style: none;
+    position: relative;
+    transform: scale(1.1) translateY(60px);
+    opacity: 0;
+    transition: 1s ease-in-out;
+  }
+
+  &__icon {
+    height: 46rem;
+    margin-bottom: 17rem;
+
+    path {
+      fill: #c20000;
+    }
+  }
+
+  &__title {
+    height: 52rem;
+    font-size: 22rem;
+    font-weight: 600;
+    line-height: calc(26 / 22);
+    color: var(--text-color);
+    margin-bottom: 5rem;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 14rem;
+    line-height: calc(23 / 14);
+    color: var(--text-color);
+    margin-top: auto;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .service {
+    &__list {
+      gap: 36rem;
+      grid-template-columns: unset;
+      grid-auto-columns: 265rem;
+      grid-auto-flow: column;
+      justify-content: flex-start;
+      overflow: auto;
+      -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+      scroll-snap-stop: always;
+      touch-action: manipulation;
+    }
+
+    &__list::-webkit-scrollbar {
+      display: none;
+    }
+
+    &__item {
+      scroll-snap-align: start;
+    }
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .service {
+    --max-width-heading: 450rem;
+    --font-size-heading: 25rem;
+    --line-height-heading: 33rem;
+  }
+}
+
+@media screen and (max-width: 479.98px) {
+  .service {
+    --padding-top: 40rem;
+    --padding-bottom: 100rem;
+  }
+}
