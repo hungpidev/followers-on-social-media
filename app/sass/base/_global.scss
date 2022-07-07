@@ -1,6 +1,8 @@
 :root {
   --theme: #ffffff;
   --menu: #eeeeee;
+  --line: #ff4203;
+  --active-menu: #ff4203;
   --text-color: #000;
   --header-bgc: rgba(252, 253, 253, 0.89);
   --btn-color: #3734a9;
@@ -15,6 +17,8 @@
 [data-theme="dark"] {
   --theme: #1f2028;
   --menu: #34353f;
+  --line: #03ff89;
+  --active-menu: #03ff89;
   --text-color: #fff;
   --header-bgc: rgba(31, 32, 40, 0.89);
   --btn-color: #5b56f3;
@@ -84,7 +88,7 @@ body {
 .line-effect {
   width: 0;
   height: 5rem;
-  background-color: #ff4203;
+  background-color: var(--line);
   position: fixed;
   pointer-events: none;
   z-index: 999999;

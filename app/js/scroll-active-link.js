@@ -10,7 +10,12 @@ function handleActiveLink(selector, link) {
     linkActive.classList.remove("active");
   }
 }
-handleActiveLink(".hero", "#home");
+window.addEventListener("load", function () {
+  handleActiveLink(".hero", "#home");
+  handleActiveLink(".service", "#service");
+  handleActiveLink(".testimonial", "#testimonial");
+  handleActiveLink(".footer", "#about");
+});
 window.addEventListener("scroll", function () {
   handleActiveLink(".hero", "#home");
   handleActiveLink(".service", "#service");

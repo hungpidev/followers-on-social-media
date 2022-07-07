@@ -148,9 +148,11 @@
 .menu {
   list-style: none;
   margin-left: auto;
-  @include flexBox(center, stretch);
+  @include flexBox(stretch, stretch);
 
   &__item {
+    @include flexBox(center, stretch);
+    position: relative;
     padding: 0 28rem;
     cursor: pointer;
   }
@@ -160,11 +162,22 @@
     font-weight: 700;
     line-height: 20rem;
     color: var(--text-color);
-    position: relative;
     transition: 0.25s linear;
 
     &.active {
-      color: #ff4203;
+      color: var(--active-menu);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: currentColor;
+        opacity: 0.125;
+        border-radius: 5rem;
+      }
     }
   }
 }
