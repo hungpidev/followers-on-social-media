@@ -112,6 +112,8 @@
     padding-bottom: 100rem;
 
     &__list {
+      padding: 28px 20px 0 20px;
+      scroll-padding: 0 20px;
       justify-content: flex-start;
       grid-template-columns: unset;
       grid-auto-flow: column;
