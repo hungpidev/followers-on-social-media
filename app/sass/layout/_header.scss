@@ -157,21 +157,13 @@
 
   &__link {
     font-size: 18rem;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 20rem;
     color: var(--text-color);
     position: relative;
     transition: 0.25s linear;
 
     &.active {
-      color: #ff4203;
-    }
-
-    &:active {
-      opacity: 0.2;
-    }
-
-    &:hover {
       color: #ff4203;
     }
   }
@@ -223,10 +215,6 @@
 
       &.active {
         color: var(--text-color);
-      }
-
-      &:active {
-        opacity: 1;
       }
 
       &::before {
