@@ -27,6 +27,9 @@
   }
 
   &__list {
+    max-width: 1280rem;
+    margin: 0 auto;
+    padding: 0 15px;
     position: relative;
     transform: scale(1.1) translateY(60px);
     opacity: 0;
@@ -112,8 +115,7 @@
     padding-bottom: 100rem;
 
     &__list {
-      padding: 28px 20px 0 20px;
-      scroll-padding: 0 20px;
+      scroll-padding: 0 15px;
       justify-content: flex-start;
       grid-template-columns: unset;
       grid-auto-flow: column;

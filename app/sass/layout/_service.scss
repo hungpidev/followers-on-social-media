@@ -22,6 +22,9 @@
   }
 
   &__list {
+    max-width: 1280rem;
+    margin: 0 auto;
+    padding: 0 15px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 64rem;
@@ -62,8 +65,7 @@
 @media screen and (max-width: 1023px) {
   .service {
     &__list {
-      padding: 0 20px;
-      scroll-padding: 0 20px;
+      scroll-padding: 0 15px;
       gap: 36rem;
       grid-template-columns: unset;
       grid-auto-columns: 265rem;
