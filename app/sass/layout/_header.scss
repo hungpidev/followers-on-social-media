@@ -221,6 +221,10 @@
       @include flexBox(center, stretch);
       padding: 20rem;
 
+      &.active {
+        color: var(--text-color);
+      }
+
       &:active {
         opacity: 1;
       }
