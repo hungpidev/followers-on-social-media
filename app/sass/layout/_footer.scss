@@ -142,12 +142,12 @@
 
 @media screen and (max-width: 1279.98px) {
   .footer {
-    &-content {
+    &__content {
       flex-direction: column;
       gap: 53rem;
     }
 
-    &-heading {
+    &__heading {
       font-size: 35rem;
     }
   }
@@ -155,16 +155,16 @@
 
 @media screen and (max-width: 767.98px) {
   .footer {
-    &-heading {
+    &__heading {
       font-size: 25rem;
     }
 
-    &-right {
+    &__right {
       grid-template-columns: repeat(1, 1fr);
       grid-row-gap: 50rem;
     }
 
-    &-copyright {
+    &--copyright {
       flex-direction: column;
       align-items: flex-start;
       gap: 10rem;

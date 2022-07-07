@@ -7,7 +7,7 @@ window.addEventListener("load", function () {
   }
   window.addEventListener("click", handleClickOutside);
   function handleClickOutside(e) {
-    if (e.target.matches(":not(.header-toggle,.menu,.menu *)")) {
+    if (e.target.matches(":not(.header__toggle,.menu,.menu *)")) {
       menu.classList.remove("is-show");
     }
   }
