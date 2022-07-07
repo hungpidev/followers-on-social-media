@@ -163,8 +163,16 @@
     position: relative;
     transition: 0.25s linear;
 
+    &.active {
+      color: #ff4203;
+    }
+
     &:active {
       opacity: 0.2;
+    }
+
+    &:hover {
+      color: #ff4203;
     }
   }
 }

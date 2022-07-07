@@ -1,5 +1,13 @@
 window.addEventListener("load", function () {
-  const menuItems = document.querySelectorAll(".menu__item");
+  const menuLinks = [...document.querySelectorAll(".menu__link")];
+  const menuItems = [...document.querySelectorAll(".menu__item")];
+  menuLinks.forEach((item) => {
+    item.addEventListener("click", function () {
+      const linkActive = document.querySelector(".menu__link.active");
+      linkActive.classList.remove("active");
+      this.classList.add("active");
+    });
+  });
   menuItems.forEach((item) => {
     item.addEventListener("mouseenter", handleHoverLink);
     item.addEventListener("mouseleave", () => {
