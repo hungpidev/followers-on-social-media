@@ -223,6 +223,7 @@
     }
 
     &__link {
+      width: 100%;
       @include flexBox(center, stretch);
       padding: 20rem;
 
