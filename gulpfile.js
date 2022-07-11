@@ -1,4 +1,5 @@
 const { src, dest, watch, series } = require("gulp");
+const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const pug = require("gulp-pug");
 const postcss = require("gulp-postcss");
@@ -6,7 +7,13 @@ const rename = require("gulp-rename");
 const cssnano = require("cssnano");
 const terser = require("gulp-terser");
 const concat = require("gulp-concat");
+const imagemin = require("gulp-imagemin");
 const browsersync = require("browser-sync").create();
+
+// Image
+function imageTask() {
+  return src("app/images/*").pipe(imagemin()).pipe(dest("public/images"));
+}
 
 // Sass Task
 function sassTask() {
@@ -58,13 +65,19 @@ function browsersyncReload(cb) {
 function watchTask() {
   watch("public/*.html", browsersyncReload);
   watch(
-    ["app/sass/**/*.scss", "app/views/**/*.pug", "app/js/**/*.js"],
+    [
+      "app/images/*",
+      "app/sass/**/*.scss",
+      "app/views/**/*.pug",
+      "app/js/**/*.js",
+    ],
     series(sassTask, pugTask, jsTask, browsersyncReload)
   );
 }
 
 // Default Gulp task
 exports.default = series(
+  imageTask,
   sassTask,
   pugTask,
   jsTask,
