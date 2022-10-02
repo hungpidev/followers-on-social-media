@@ -12,7 +12,9 @@ const browsersync = require("browser-sync").create();
 
 // Image
 function imageTask() {
-  return src("app/images/*").pipe(imagemin()).pipe(dest("public/images"));
+  return src("app/images/*")
+    .pipe(imagemin())
+    .pipe(dest("public/home/images"));
 }
 
 // Sass Task
@@ -25,12 +27,14 @@ function sassTask() {
         suffix: ".min",
       })
     )
-    .pipe(dest("public/css", { sourcemaps: "." }));
+    .pipe(dest("public/home/css", { sourcemaps: "." }));
 }
 
 // Pug Task
 function pugTask() {
-  return src("app/views/*.pug").pipe(pug()).pipe(dest("public"));
+  return src("app/views/*.pug")
+    .pipe(pug())
+    .pipe(dest("public"));
 }
 
 // JavaScript Task
@@ -43,7 +47,7 @@ function jsTask() {
         suffix: ".min",
       })
     )
-    .pipe(dest("public/js", { sourcemaps: "." }));
+    .pipe(dest("public/home/js", { sourcemaps: "." }));
 }
 
 // Browsersync Tasks
