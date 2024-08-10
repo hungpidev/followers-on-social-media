@@ -13,11 +13,19 @@
   }
 
   &__logo {
+    border-radius: 50%;
+
     a {
+      border-radius: inherit;
       font-weight: 900;
       font-size: var(--fontsize-header);
       text-transform: uppercase;
       color: var(--text-color);
+
+      img {
+        border-radius: inherit;
+        max-width: 100px
+      }
     }
   }
 
