@@ -114,6 +114,7 @@
     transition: 1s ease-in-out;
 
     img {
+      max-width: 900px;
       @include size(100%);
       object-fit: cover;
     }
